@@ -82,9 +82,7 @@ This C++ code implements the conversion of a given Nondeterministic Finite Autom
 ----
 ## 3. CFG Conversion
 
-Understand how to convert Context-Free Grammars (CFG) into various other forms, such as Chomsky Normal Form or Greibach Normal Form, which facilitates parsing and analysis.
-
-This C++ code defines a Context-Free Grammar (CFG) parser for a given string. It checks if the string follows a specific grammar rule defined by the CFG. The CFG rules are as follows:
+Understand how to convert Context-Free Grammars (CFG) into various other forms, such as Chomsky Normal Form or Greibach Normal Form, which facilitates parsing and analysis.This C++ code defines a Context-Free Grammar (CFG) parser for a given string. It checks if the string follows a specific grammar rule defined by the CFG. The CFG rules are as follows:
 
 1. The input string can only contain '0', '1', '+', '*', '(', and ')'.
 2. The CFG non-terminal 'E' can be replaced with either '0' or '1'.
@@ -111,7 +109,6 @@ The code takes a user-input string and then applies the CFG rules to determine i
 ## 4. Universal DFA
 
 Discover the implementation of a Universal Deterministic Finite Automaton capable of simulating other DFAs. This concept plays a significant role in language recognition and computation theory.
-
 This C++ code represents a Universal Deterministic Finite Automaton (DFA) that accepts or rejects strings based on a given set of states, transitions, and final states. The program takes input for the number of states, start state, final states, and transition functions for input symbols '0' and '1'. It then prompts the user to enter a string, which will be checked for acceptance or rejection by the DFA.
 
 ### Explanation with an example:
@@ -163,7 +160,6 @@ This C++ code represents a Universal Deterministic Finite Automaton (DFA) that a
 ## 5. NPDA (Non-deterministic Pushdown Automaton)
 
 Witness the code for creating a Non-deterministic Pushdown Automaton, a powerful model used in context-free language recognition and parsing.
-
 This code implements a Pushdown Automaton (PDA) to check if a given string is of the form "wwR", where "w" is any string, and "wR" represents the reverse of "w". The PDA uses a stack to keep track of characters read from the input string.
 
 Let's break down the code and explain it step by step:
