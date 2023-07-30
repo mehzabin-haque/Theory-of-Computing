@@ -105,59 +105,9 @@ The code takes a user-input string and then applies the CFG rules to determine i
   
   The code handles various scenarios, such as incorrect characters in the input string, unbalanced parentheses, and incorrect use of operators.
 
-----
-## 4. Universal DFA
 
-Discover the implementation of a Universal Deterministic Finite Automaton capable of simulating other DFAs. This concept plays a significant role in language recognition and computation theory.
-This C++ code represents a Universal Deterministic Finite Automaton (DFA) that accepts or rejects strings based on a given set of states, transitions, and final states. The program takes input for the number of states, start state, final states, and transition functions for input symbols '0' and '1'. It then prompts the user to enter a string, which will be checked for acceptance or rejection by the DFA.
 
-### Explanation with an example:
-
-  Let's assume we have the following DFA:
-  ```
-  Number of states (Q): 3
-  Start state (q0): 1
-  Number of final states (f): 1
-  Final state(s) (F): 3
-  Transition table:
-  1 --> 0 --> 2
-  1 --> 1 --> 3
-  2 --> 0 --> 2
-  2 --> 1 --> 2
-  3 --> 0 --> 3
-  3 --> 1 --> 2
-  ```
-  The DFA diagram:
-  ```
-         0       1
-     --> 2  <--  1 (Start, Final)
-       ^  |       |
-       |  V       V
-       3 <--  2 (Final)
-  ```
-  
-  Now, suppose we want to check the string "101" for acceptance:
-  
-  1. The program will start from the start state, i.e., state 1.
-  2. It will read the first symbol '1', transitioning from state 1 to state 3.
-  3. Next, it reads the symbol '0', transitioning from state 3 to state 3.
-  4. Finally, it reads the last symbol '1', transitioning from state 3 to state 2.
-  
-  After processing the entire string, the DFA ends at state 2.
-  
-  Output:
-  ```
-  Steps are :
-  Start --> 1 --> (1 ) --> 3 --> (0 ) --> 3 --> (1 ) --> 2
-  
-  String is accepted
-  ```
-  
-  The program displays the steps taken while processing the string. In this case, the DFA ends up in one of the final states (state 2), so the string "101" is accepted.
-
-----
-
-## 5. NPDA (Non-deterministic Pushdown Automaton)
+## 4. NPDA (Non-deterministic Pushdown Automaton)
 
 Witness the code for creating a Non-deterministic Pushdown Automaton, a powerful model used in context-free language recognition and parsing.
 This code implements a Pushdown Automaton (PDA) to check if a given string is of the form "wwR", where "w" is any string, and "wR" represents the reverse of "w". The PDA uses a stack to keep track of characters read from the input string.
@@ -207,7 +157,7 @@ Let's break down the code and explain it step by step:
   The PDA has processed the entire string, and the stack now contains ['z', 'a', 'b']. Since the top of the stack is not 'z', the input string "abccba" is rejected.
 
 ----
-## 6. CFG to PDA Conversion
+## 5. CFG to PDA Conversion
 
 Explore the process of converting Context-Free Grammars (CFG) to Pushdown Automata (PDA), enabling the recognition of context-free languages through stack-based computation.
 This code is a C++ program that converts context-free grammar (CFG) production rules into production rules for a Pushdown Automaton (PDA). The program takes the number of production rules as input, then prompts the user to input the non-terminal symbol and its corresponding production rule for each production. Finally, it generates the corresponding PDA production rules for the given CFG.
