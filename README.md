@@ -30,57 +30,8 @@ This code demonstrates the construction of Deterministic Finite Automata (DFA) u
   Given String is accepted.
    ```
 
-## 2. NFA to DFA Conversion
 
-Explore the conversion process from Non-deterministic Finite Automata (NFA) to DFA, a crucial step in simplifying automata and optimizing language recognition.
-This C++ code implements the conversion of a given Nondeterministic Finite Automaton (NFA) to its corresponding Deterministic Finite Automaton (DFA). The program takes user input for the NFA transitions and then generates the corresponding DFA transitions based on the provided NFA.
-
-### Explanation with Example:
-  Let's take a simple NFA as an example:
-  
-  NFA with 3 states: A, B, C
-  - Transition from A to 0: B
-  - Transition from A to 1: A
-  - Transition from B to 0: C
-  - Transition from B to 1: B
-  - Transition from C to 0: C
-  - Transition from C to 1: C
-  
-  1. The user will input the transitions for each state of the NFA:
-     - From state A through 0 transition: B
-     - From state A through 1 transition: A
-     - From state B through 0 transition: C
-     - From state B through 1 transition: B
-     - From state C through 0 transition: C
-     - From state C through 1 transition: C
-  
-  2. The program will print the NFA table:
-  ```
-  NFA Table
-  
-  _______________________________
-  State   0   1
-  A       B   A
-  B       C   B
-  C       C   C
-  ```
-  
-  3. The program will convert the NFA to a DFA and print the DFA table:
-  ```
-  DFA Table
-  
-  _______________________________
-  State   0   1
-  A       B   A
-  B       C   B
-  C       C   C
-  BC      C   B
-  ```
-  
-  In the DFA table, a new state "BC" is added, representing the set of states {B, C} combined through the ε (epsilon) transition. The DFA has one additional state compared to the NFA.
-
-----
-## 3. CFG Conversion
+## 2. CFG Conversion
 
 Understand how to convert Context-Free Grammars (CFG) into various other forms, such as Chomsky Normal Form or Greibach Normal Form, which facilitates parsing and analysis.This C++ code defines a Context-Free Grammar (CFG) parser for a given string. It checks if the string follows a specific grammar rule defined by the CFG. The CFG rules are as follows:
 
@@ -107,7 +58,7 @@ The code takes a user-input string and then applies the CFG rules to determine i
 
 
 
-## 4. NPDA (Non-deterministic Pushdown Automaton)
+## 3. NPDA (Non-deterministic Pushdown Automaton)
 
 Witness the code for creating a Non-deterministic Pushdown Automaton, a powerful model used in context-free language recognition and parsing.
 This code implements a Pushdown Automaton (PDA) to check if a given string is of the form "wwR", where "w" is any string, and "wR" represents the reverse of "w". The PDA uses a stack to keep track of characters read from the input string.
@@ -157,7 +108,7 @@ Let's break down the code and explain it step by step:
   The PDA has processed the entire string, and the stack now contains ['z', 'a', 'b']. Since the top of the stack is not 'z', the input string "abccba" is rejected.
 
 ----
-## 5. CFG to PDA Conversion
+## 4. CFG to PDA Conversion
 
 Explore the process of converting Context-Free Grammars (CFG) to Pushdown Automata (PDA), enabling the recognition of context-free languages through stack-based computation.
 This code is a C++ program that converts context-free grammar (CFG) production rules into production rules for a Pushdown Automaton (PDA). The program takes the number of production rules as input, then prompts the user to input the non-terminal symbol and its corresponding production rule for each production. Finally, it generates the corresponding PDA production rules for the given CFG.
